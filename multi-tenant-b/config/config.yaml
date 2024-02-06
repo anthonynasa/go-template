@@ -1,0 +1,15 @@
+# database 配置文件
+# 以cityName区分
+city1:
+  host: ip
+  port: 端口
+  user: 用户名
+  password: 密码
+  dbname: 数据库名
+
+city2:
+  host: ip
+  port: 端口
+  user: 用户名
+  password: 密码
+  dbname: 数据库名
