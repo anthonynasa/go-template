@@ -1,6 +1,7 @@
+// 自定义结构体
+
 package model
 
-// 自定义结构体
 import "time"
 
 type Customer struct {

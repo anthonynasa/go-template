@@ -1,6 +1,7 @@
+// gorm gen生成器配置文件
+
 package main
 
-// gorm gen生成器配置文件
 import (
 	"gorm.io/gen"
 	"gorm.io/gorm"

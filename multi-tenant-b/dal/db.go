@@ -1,12 +1,14 @@
+// 初始化数据连接
+
 package dal
 
-// 初始化数据连接
 import (
 	"fmt"
 	"github.com/spf13/viper"
 	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
 	"log"
+	"strings"
 )
 
 var (
@@ -19,6 +21,8 @@ var (
 //	@param cityName
 func InitDB(cityName string) {
 	var err error
+	// 转换为小写
+	cityName = strings.ToLower(cityName)
 	// 设置viper读取配置文件
 	viper.SetConfigFile("./config/config.yaml")
 	if err := viper.ReadInConfig(); err != nil {

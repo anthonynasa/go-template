@@ -1,6 +1,7 @@
+// 处理器,中间件
+
 package handler
 
-// 处理器,中间件
 import (
 	"github.com/gin-gonic/gin"
 	"multi-tenant-b/dal"

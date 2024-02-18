@@ -1,6 +1,7 @@
+// 路由配置
+
 package route
 
-// 路由配置
 import (
 	"github.com/gin-gonic/gin"
 	"multi-tenant-b/handler"
@@ -10,20 +11,18 @@ func SetupRoute() *gin.Engine {
 	// 创建gin引擎
 	r := gin.Default()
 
-	/*
-		// 映射static目录
-		r.Static("/assets", "./web/assets")
-		r.Static("/v1/assets", "./web/assets")
-		r.StaticFile("/favicon.png", "./web/assets/images/favicon.png")
-		// 加载html文件
-		r.LoadHTMLGlob("./web/*.html")
+	// 映射static目录
+	r.Static("/assets", "./web/assets")
+	r.Static("/v1/assets", "./web/assets")
+	r.StaticFile("/favicon.ico", "./web/assets/images/favicon.png")
 
-	*/
+	// 加载html文件
+	r.LoadHTMLGlob("./web/*.html")
 
 	// 路由注册
 
 	// index路由
-	// r.GET("/index", handler.Index)
+	r.GET("/index", handler.Index)
 
 	// v1: customer CRUD
 	v1 := r.Group("/v1")
